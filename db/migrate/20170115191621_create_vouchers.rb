@@ -8,8 +8,8 @@ class CreateVouchers < ActiveRecord::Migration[5.0]
       t.string :podcast
       t.string :link
       t.string :expiry_date
-      t.boolean :expired
-      t.integer :votes
+      t.boolean :expired, default: false
+      t.integer :votes, default: 0
 
       t.timestamps
     end
