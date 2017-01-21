@@ -27,3 +27,9 @@ podcast_array =
     link: Faker::Internet.url('example.com', '/podcast.html'),
     expiry_date: DateTime.new(2017,rand(3..12),rand(1..30))
 end
+
+User.create! \
+  email: "test@gmail.com",
+  password: "123123",
+  first_name: "John",
+  last_name: "Ridd"
