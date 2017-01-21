@@ -4,4 +4,25 @@ class VouchersController < ApplicationController
   def index
     @vouchers = Voucher.all
   end
+
+  def new
+    @voucher = Voucher.new
+  end
+
+  def create
+    @voucher = Voucher.create!(voucher_params)
+    if @voucher.save
+      redirect_to :root
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def voucher_params
+    params.require(:voucher).permit(:title, :description,
+      :code, :company, :podcast, :link, :expiry_date, :expired,
+      :votes)
+  end
 end
