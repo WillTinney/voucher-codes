@@ -19,7 +19,7 @@ podcast_array =
 
 5.times do
   Voucher.create! \
-    title: Faker::Commerce.product_name,
+    title: rand(0..60).to_s + "\% off " + Faker::Commerce.product_name,
     description: Faker::Lorem.sentence(3),
     code: "code " + rand(10..9999).to_s,
     company: Faker::Company.name,

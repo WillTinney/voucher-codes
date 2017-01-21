@@ -1,4 +1,4 @@
-.product {
+.voucher {
   display: flex;
   align-items: center;
   padding: 20px;
@@ -7,29 +7,29 @@
 }
 
 /* Body design */
-.product-body {
+.voucher-body {
   flex: 1 1 auto;
 }
-.product-body h3 {
+.voucher-body h3 {
   font-weight: bold;
   font-size: 23px;
   margin-top: 0;
 }
-.product-body p {
+.voucher-body p {
   font-weight: lighter;
   color: #999999;
   margin-bottom: 0;
 }
 
-/* Product image */
-.product-image {
+/* voucher image */
+.voucher-image {
   border-radius: 10px;
   margin-right: 20px;
   width: 175px;
 }
 
 /* Upvote design */
-.product-upvote {
+.voucher-upvote {
   padding-right: 20px;
   text-align: center;
   transition: all 0.15s ease;
@@ -37,10 +37,10 @@
   font-size: 13px;
   line-height: 20px;
 }
-.product-count {
+.voucher-count {
   margin: 2px 0 0;
 }
-.product-arrow {
+.voucher-arrow {
   transition: all 0.15s ease;
   width: 0;
   height: 0;
@@ -53,21 +53,21 @@
 }
 
 /* Controls design */
-.product-controls {
+.voucher-controls {
   display: flex;
   align-items: center;
   text-align: center;
   margin: 0px;
 }
-.product-controls a {
+.voucher-controls a {
   padding: 0 20px;
   font-size: 17px;
   color: #E6E6E6;
 }
-.product-controls a:hover {
+.voucher-controls a:hover {
   color: #D3473C !important
 }
-.product-controls-hidden a {
+.voucher-controls-hidden a {
   color: transparent;
   font-size: 15px;
   transition: all 0.15s ease;
@@ -75,17 +75,17 @@
 }
 
 /* Hover effects */
-.product:hover {
+.voucher:hover {
   background: #f7f7fa;
   cursor: pointer;
 }
-.product-upvote:hover, .product-upvote.product-upvote-upvoted {
+.voucher-upvote:hover, .voucher-upvote.voucher-upvote-upvoted {
   color: #5898f1;
   cursor: pointer;
 }
-.product-upvote-upvoted .product-arrow {
+.voucher-upvote-upvoted .voucher-arrow {
   border-bottom-color: #5898f1;
 }
-// .product:hover .product-upvote { transform: scale(1.2) }
-.product:hover .product-controls-hidden a { color: #E6E6E6 }
-.product-upvote:hover .product-arrow { border-bottom: 9px solid #5898f1 }
+// .voucher:hover .voucher-upvote { transform: scale(1.2) }
+.voucher:hover .voucher-controls-hidden a { color: #E6E6E6 }
+.voucher-upvote:hover .voucher-arrow { border-bottom: 9px solid #5898f1 }
