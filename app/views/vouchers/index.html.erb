@@ -1,2 +1,13 @@
-<h1>Vouchers#index</h1>
-<p>Find me in app/views/vouchers/index.html.erb</p>
+<h1>Podcast Voucher Codes</h1>
+<% @vouchers.each do |voucher| %>
+  <div class="voucher">
+    <div class='voucher-upvote'>
+      <div class="voucher-arrow"></div>
+      <div class='voucher-count'>0</div>
+    </div>
+    <div class='voucher-body'>
+      <h3>10% off from Bill Burr</h3>
+      <p>Enter code: Burr10 at checkout</p>
+    </div>
+  </div>
+<% end %>
