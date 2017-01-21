@@ -9,6 +9,6 @@ class HomeTest < ActionDispatch::IntegrationTest
   test "index_loads_correct_number_of_vouchers" do
     visit "/"
     assert page.has_selector?('.voucher', count: Voucher.count)
-    save_and_open_screenshot
+    # save_and_open_screenshot
   end
 end
