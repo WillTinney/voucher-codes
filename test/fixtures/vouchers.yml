@@ -1,0 +1,10 @@
+<% 1.upto(5) do |i| %>
+product_<%= i %>:
+    title: <%= rand(0..60).to_s + "\% off " + Faker::Commerce.product_name %>
+    description: <%= Faker::Lorem.sentence(3) %>
+    code: <%= "code " + rand(10..9999).to_s %>
+    company: <%= Faker::Company.name %>
+    podcast: "Freakanomics Radio"
+    link: <%= Faker::Internet.url('example.com', '/podcast.html') %>
+    expiry_date: <%= DateTime.new(2017,rand(3..12),rand(1..30)) %>
+<% end %>
