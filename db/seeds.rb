@@ -23,7 +23,7 @@ draft_kings = Voucher.create! \
   code: "BURR40",
   company: "Draft Kings",
   podcast: "Bill Burr's Monday Morning Podcast",
-  link: "www.draftkings.com",
+  url: "www.draftkings.com",
   expiry_date: DateTime.new(2017,rand(3..12),rand(1..30))
 
 5.times do
@@ -33,7 +33,7 @@ draft_kings = Voucher.create! \
     code: "code " + rand(10..9999).to_s,
     company: Faker::Company.name,
     podcast: podcast_array[rand(0...podcast_array.count)],
-    link: Faker::Internet.url('example.com', '/podcast.html'),
+    url: Faker::Internet.url('example.com', '/podcast.html'),
     expiry_date: DateTime.new(2017,rand(3..12),rand(1..30))
 end
 

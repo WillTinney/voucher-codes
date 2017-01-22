@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 20170121223540) do
     t.string   "code"
     t.string   "company"
     t.string   "podcast"
-    t.string   "link"
+    t.string   "url"
     t.string   "expiry_date"
     t.boolean  "expired",     default: false
     t.datetime "created_at",                  null: false
