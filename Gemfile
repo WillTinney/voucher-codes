@@ -18,6 +18,17 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 
+# Vote counter
+gem 'acts_as_votable'
+
+# React Config
+gem 'js-routes', '~> 1.3'
+gem 'react-rails'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-classnames'
+end
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'

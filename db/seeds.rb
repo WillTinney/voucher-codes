@@ -17,6 +17,15 @@ podcast_array =
     "99% Invisible"
   ]
 
+draft_kings = Voucher.create! \
+  title: "40\% off Draft Kings subscription",
+  description: "Just enter code BURR40 at checkout",
+  code: "BURR40",
+  company: "Draft Kings",
+  podcast: "Bill Burr's Monday Morning Podcast",
+  link: "www.draftkings.com",
+  expiry_date: DateTime.new(2017,rand(3..12),rand(1..30))
+
 5.times do
   Voucher.create! \
     title: rand(0..60).to_s + "\% off " + Faker::Commerce.product_name,
@@ -28,8 +37,25 @@ podcast_array =
     expiry_date: DateTime.new(2017,rand(3..12),rand(1..30))
 end
 
-User.create! \
-  email: "test@gmail.com",
+john = User.create! \
+  email: "john@gmail.com",
   password: "123123",
   first_name: "John",
-  last_name: "Ridd"
+  last_name: "Ridd",
+  avatar: "user.png"
+
+will = User.create! \
+  email: "will@gmail.com",
+  password: "123123",
+  first_name: "Will",
+  last_name: "Tinney",
+  avatar: "user.png"
+
+test_user = User.create! \
+  email: "test@gmail.com",
+  password: "123123",
+  first_name: "Test",
+  last_name: "User",
+  avatar: "user.png"
+
+john.up_votes draft_kings

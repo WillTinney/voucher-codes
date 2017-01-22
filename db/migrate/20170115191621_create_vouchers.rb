@@ -9,7 +9,6 @@ class CreateVouchers < ActiveRecord::Migration[5.0]
       t.string :link
       t.string :expiry_date
       t.boolean :expired, default: false
-      t.integer :votes, default: 0
 
       t.timestamps
     end
