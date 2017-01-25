@@ -1,20 +1,8 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-8 col-sm-offset-2">
-      <h1>Podcast Voucher Codes</h1>
-      <% @vouchers.each do |voucher| %>
-        <div class="voucher">
-          <div class='voucher-upvote'>
-            <div class="voucher-arrow"></div>
-            <div class='voucher-count'>0</div>
-          </div>
-          <div class='voucher-body'>
-            <h3><%= voucher.title %></h3>
-            <p><%= voucher.description %></p>
-          </div>
-        </div>
-      <% end %>
-      <%= link_to "Add voucher", new_voucher_path(@voucher) %>
+      <%= react_component "VoucherList",
+      render(template: 'vouchers/index.json.jbuilder') %>
     </div>
   </div>
 </div>
