@@ -18,6 +18,15 @@ class VouchersController < ApplicationController
     end
   end
 
+  def upvote
+    @voucher = Voucher.find(params[:id])
+    if current_user.voted_for? @voucher
+      current_user.unvote_for @voucher
+    else
+      current_user.up_votes @voucher
+    end
+  end
+
   private
 
   def voucher_params

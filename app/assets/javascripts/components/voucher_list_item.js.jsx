@@ -5,7 +5,7 @@ var VoucherListItem = React.createClass({
         <div className="voucher-controls">
           <div className="voucher-control">
             <div className="user-badge-container ">
-              <img src={'app/assets/images/user.png'} className="avatar"/>
+              <img src={'http://www.iconsfind.com/wp-content/uploads/2015/08/20150831_55e46ad551392.png'} className="avatar"/>
             </div>
           </div>
         </div>
@@ -15,7 +15,9 @@ var VoucherListItem = React.createClass({
           </h3>
           <p>{this.props.voucher.description}</p>
         </div>
-        <div className="voucher-upvote">TODO</div>
+        <div className="voucher-upvote">
+          <Upvote voucher={this.props.voucher} />
+        </div>
       </div>
     );
   }
